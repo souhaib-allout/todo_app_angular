@@ -25,7 +25,7 @@ A full-stack Todo application built with Angular and Spring Boot, demonstrating 
 - Angular Signals
 - HTTP Client
 - Custom Pipes & Directives
-- Global State (e.g., RxJS, NgRx, or a service-based approach)
+- Global State (service-based approach)
 
 ### Backend (Spring Boot)
 - Spring Boot (REST API)
