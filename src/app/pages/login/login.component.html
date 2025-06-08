@@ -1,0 +1,24 @@
+<div>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="email">Email</label><br>
+      <input type="email" id="email" placeholder="Email" formControlName="email">
+      <div class="error-section">
+        <div *ngIf="loginForm.controls.email.errors?.['required']">Email is required.</div>
+        <div *ngIf="loginForm.controls.email.errors?.['email']">Please enter a valid email.</div>
+      </div>
+    </div>
+    <div>
+      <label for="password">Password</label><br>
+      <input type="password" id="password" placeholder="Password" formControlName="password">
+      <div class="error-section">
+        <div *ngIf="loginForm.controls.password.errors?.['required']">Password is required.</div>
+        <div *ngIf="loginForm.controls.password.errors?.['minlength']">
+          Password must be at least {{ loginForm.controls.password.errors?.['minlength'].requiredLength }} characters (you
+          entered {{ loginForm.controls.password.errors?.['minlength'].actualLength }}).
+        </div>
+      </div>
+    </div>
+    <button [disabled]="!loginForm.valid" class="btn-primary">Login</button>
+  </form>
+</div>

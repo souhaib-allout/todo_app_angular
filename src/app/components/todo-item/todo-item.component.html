@@ -1,0 +1,21 @@
+<div appHighlightCompletedTodo [isCompleted]="todo().completed">
+  <p>
+    <input type="checkbox" [id]="todo().id" [checked]="todo().completed" (change)="changeCompetedStatus($event)">
+
+  </p>
+  <p>
+    {{ todo().name }}
+  </p>
+  <p>
+    {{ todo().userId }}
+  </p>
+  <p>
+    {{ todo().createdDate | date:"dd/MM/YYYY" }}
+  </p>
+  <p>
+    <a [routerLink]="['/update-todo',todo().id]" class="edit-todo-button">Edit</a>
+  </p>
+  <p>
+    <button (click)="deleteTodo()">Delete</button>
+  </p>
+</div>

@@ -1,0 +1,22 @@
+div{
+  display: flex;
+  gap: 30px;
+  p{
+    width: 200px;
+  }
+  .edit-todo-button{
+    background: #47883f;
+    width: 200px;
+    padding: 5px;
+    border: none;
+    color: white;
+    text-decoration: none;
+  }
+  button{
+    background: red;
+    width: 100px;
+    padding: 5px;
+    border: none;
+    color: white;
+  }
+}

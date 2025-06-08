@@ -1,0 +1,11 @@
+<div>
+
+  <h2>
+    Total : {{ todos_list().length }}
+  </h2>
+  <div>
+      @for (todo of todos_list(); track $index) {
+        <app-todo-item [todo]="todo" [id]="$index" (todoChanged)="changeTodoCompletedStatus()"/>
+      }
+  </div>
+</div>
